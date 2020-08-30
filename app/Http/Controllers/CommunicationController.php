@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class CommunicationController extends Controller
 {
-    public function index() {
-        $item = [
-            'name' => 'writer',
-            'title' => 'test',
-            'message' => '業務連絡をここに記載する。',
-            'id' => 1
-        ];
-        return view('home',$item);
+    public function index(Request $request) {
+        $items = Post::all();
+        return view('communication',['items' => $items]);
     }
 }

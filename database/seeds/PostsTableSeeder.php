@@ -18,5 +18,12 @@ class PostsTableSeeder extends Seeder
             'message' => 'シーディングテストを実施',
         ];
         DB::table('posts') -> insert($param);
+
+        $param = [
+            'name' => 'kizuki',
+            'title' => 'シーディング',
+            'message' => 'シーディングテストを実施',
+        ];
+        DB::table('posts') -> insert($param);
     }
 }

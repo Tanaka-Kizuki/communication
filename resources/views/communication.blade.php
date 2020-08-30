@@ -18,7 +18,7 @@
 </head>
 <body>
   <h1>Communication</h1>
-  <form action="/home" method="post">
+  <form action="/communication" method="post">
     <table>
     @csrf
       <tr><th>Title:  </th><td><input type="text" name="title"></td></tr>
@@ -27,28 +27,19 @@
       <tr><th></th><td><input type="submit" value="Write"></td></tr>
     </table>
   </form>
-
-  <div class="item">
+  @foreach ($items as $item)
+  <div class="item {{$item->id}}">
     <div class="title">
-        <p>{{$id}}</p>
-        <p>{{$title}} :</p>
-        <p>{{$name}}</p>
+        <p>{{$item->id}}</p>
+        <p>{{$item->name}}</p>
+        <p>{{$item->title}}</p>
     </div>
     <div class="message">
-      {{$message}}
+      {{$item->message}}
     </div>
   </div>
+  @endforeach
 
-  <div class="item">
-    <div class="title">
-        <p>{{$id}}</p>
-        <p>{{$title}} :</p>
-        <p>{{$name}}</p>
-    </div>
-    <div class="message">
-      {{$message}}
-    </div>
-  </div>
 
 </body>
 </html>
