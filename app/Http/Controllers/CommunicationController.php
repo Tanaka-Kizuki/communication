@@ -11,4 +11,13 @@ class CommunicationController extends Controller
         $items = Post::all();
         return view('communication',['items' => $items]);
     }
+
+    public function create(Request $request) {
+        $this-> validate($request,Post::$rules);
+        $post = new Post;
+        $form = $request -> all();
+        unset($form['_token']);
+        $post->fill($form)->save();
+        return redirect('/communication');
+    }
 }
