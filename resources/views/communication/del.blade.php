@@ -10,7 +10,7 @@
   <div>
     <form action="/communication/del" method="post">
     @csrf
-      <input type="text" name="id" value="{{$form->id}}">
+      <input type="hidden" name="id" value="{{$form->id}}">
       <p>{{$form->title}}</p>
       <p>{{$form->name}}</p>
       <p>{{$form->message}}</p>

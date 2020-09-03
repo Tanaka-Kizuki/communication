@@ -11,7 +11,7 @@
 <body>
   <form action="/communication/edit" method="post">
   @csrf
-  <input type="text" name="id" value="{{$form->id}}">
+  <input type="hidden" name="id" value="{{$form->id}}">
   <input type="text" name="title" value="{{$form->title}}">
   <input type="text" name="name" value="{{$form->name}}">
   <input type="text" name="message" value="{{$form->message}}">
