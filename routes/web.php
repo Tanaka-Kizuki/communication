@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('/communication','CommunicationController@index');
 Route::post('/communication','CommunicationController@create');
+
+Route::get('/communication/edit','CommunicationController@edit');
+Route::post('/communication/edit','CommunicationController@update');

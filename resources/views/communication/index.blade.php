@@ -37,6 +37,7 @@
     <div class="message">
       {{$item->message}}
     </div>
+    <a href="/communication/edit/?id={{$item->id}}">編集</a>
   </div>
   @endforeach
 
