@@ -34,4 +34,14 @@ class CommunicationController extends Controller
         $post->fill($form)->save();
         return redirect('/communication');
     }
+
+    public function delete(Request $request) {
+        $form = Post::find($request->id);
+        return view('communication.del',['form' => $form]);
+    }
+
+    public function remove(Request $request) {
+        Post::find($request->id)->delete();
+        return redirect('/communication');
+    }
 }

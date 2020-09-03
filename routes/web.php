@@ -23,3 +23,6 @@ Route::post('/communication','CommunicationController@create');
 
 Route::get('/communication/edit','CommunicationController@edit');
 Route::post('/communication/edit','CommunicationController@update');
+
+Route::get('/communication/del','CommunicationController@delete');
+Route::post('/communication/del','CommunicationController@remove');
