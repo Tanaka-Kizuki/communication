@@ -114,3 +114,10 @@ p {
   float: right;
   margin: 10px;
 }
+
+.pagination {
+  justify-content: center;
+}
+
+
+

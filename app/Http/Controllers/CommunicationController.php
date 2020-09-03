@@ -8,7 +8,7 @@ use App\Post;
 class CommunicationController extends Controller
 {
     public function index(Request $request) {
-        $items = Post::orderby('id','desc')->get();
+        $items = Post::orderby('id','desc')->Paginate(5);
         return view('communication.index',['items' => $items]);
     }
 
