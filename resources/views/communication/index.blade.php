@@ -38,11 +38,11 @@
     </div>
     <div class="message">
       {!!nl2br(e($item->message))!!}
-      <a href="/communication/edit?id={{$item->id}}">編集</a>
-      <a href="/communication/del?id={{$item->id}}">削除</a>
     </div>
     <div class="footer">
       <p class="name">担当: {{$item->name}}</p>
+      <a href="/communication/edit?id={{$item->id}}">編集</a>
+      <a href="/communication/del?id={{$item->id}}">削除</a>
       <p class="date">{{$item->updated_at}}</p>
     </div>
   </div>
